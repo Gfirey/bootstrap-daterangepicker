@@ -48,6 +48,12 @@ $(document).ready(function() {
       if ($('#timePickerIncrement').val().length && $('#timePickerIncrement').val() != 1)
         options.timePickerIncrement = parseInt($('#timePickerIncrement').val(), 10);
 
+      if ($('#potolok').val().length && $('#potolok').val() != 5)
+        options.potolok = parseInt($('#potolok').val(), 10);
+
+      if ($('#pol').val().length && $('#pol').val() != 50)
+        options.pol = parseInt($('#pol').val(), 10);
+
       if ($('#timePickerSeconds').is(':checked'))
         options.timePickerSeconds = true;
       

@@ -56,6 +56,8 @@
         this.linkedCalendars = true;
         this.autoUpdateInput = true;
         this.alwaysShowCalendars = false;
+        this.potolok = 5;
+        this.pol = 50;
         this.ranges = {};
 
         this.opens = 'right';
@@ -262,6 +264,12 @@
 
         if (typeof options.alwaysShowCalendars === 'boolean')
             this.alwaysShowCalendars = options.alwaysShowCalendars;
+
+        if (typeof options.potolok === 'number')
+            this.potolok = options.potolok;
+
+        if (typeof options.pol === 'number')
+            this.pol = options.pol;
 
         // update day names order to firstDay
         if (this.locale.firstDay != 0) {
@@ -690,8 +698,8 @@
             if (this.showDropdowns) {
                 var currentMonth = calendar[1][1].month();
                 var currentYear = calendar[1][1].year();
-                var maxYear = (maxDate && maxDate.year()) || (currentYear + 5);
-                var minYear = (minDate && minDate.year()) || (currentYear - 50);
+                var maxYear = (maxDate && maxDate.year()) || (currentYear + this.potolok);
+                var minYear = (minDate && minDate.year()) || (currentYear - this.pol);
                 var inMinYear = currentYear == minYear;
                 var inMaxYear = currentYear == maxYear;
 

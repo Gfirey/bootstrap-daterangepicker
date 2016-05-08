@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-        <script src="moment.min.js"></script>         
+        <script src="moment.min.js"></script>
 
         <script src="daterangepicker.js"></script>
         <link rel="stylesheet" type="text/css" href="daterangepicker.css" />
@@ -281,7 +281,7 @@
                                 $('input[name="birthdate"]').daterangepicker({
                                     singleDatePicker: true,
                                     showDropdowns: true
-                                }, 
+                                },
                                 function(start, end, label) {
                                     var years = moment().diff(start, 'years');
                                     alert("You are " + years + " years old.");
@@ -420,6 +420,15 @@
                               <div class="form-group">
                                 <label for="maxDate">maxDate</label>
                                 <input type="text" class="form-control" id="maxDate" value="" placeholder="MM/DD/YYYY">
+                              </div>
+
+                              <div class="form-group">
+                                <label for="potolok">potolok</label>
+                                <input type="text" class="form-control" id="potolok" value="5">
+                              </div>
+                              <div class="form-group">
+                                <label for="pol">pol</label>
+                                <input type="text" class="form-control" id="pol" value="50">
                               </div>
 
                             </div>
